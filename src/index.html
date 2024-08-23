@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../uibuilder/images/node-blue.ico">
+
+    <title>Hệ thống củ lìn của Tracy</title>
+    <meta name="description" content="Node-RED uibuilder - Blank template">
+
+    <!-- Your own CSS (defaults to loading uibuilders css)-->
+    <link type="text/css" rel="stylesheet" href="./index.css" media="all">
+
+    <!-- #region Supporting Scripts. These MUST be in the right order. Note no leading / -->
+    <script defer src="../uibuilder/uibuilder.iife.min.js"></script>
+    <script defer src="index.js"></script>
+    <!-- <script defer src="./index.js">/* OPTIONAL: Put your custom code in that */</script> -->
+    <!-- #endregion -->
+
+</head><body class="uib">
+    
+    <h2>Welcome cì xà mâu</h2>
+    <label for="select-machine">Choose machine:</label>
+    <select id="select-machine">
+        <option value="" disabled selected hidden>-----</option>
+        <option value="ACO">ACO</option>
+        <option value="AAC">AAC</option>
+        <option value="UCB">UCB</option>
+        <option value="UCC">UCC</option>
+        <option value="ACP">ACP</option>
+    </select>
+
+    <label for="select-machine-no">Machine No:</label>
+    <select id="select-machine-no">     
+        <option value="" disabled selected hidden>-----</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+    </select>
+    Select start date and time:
+    <input id="datetimeStart" type="datetime-local" />
+    Select finish date and time:
+    <input id="datetimeFinish" type="datetime-local" />
+
+    <form>
+        <label for="issues-text">Issues:</label>
+        <input type="text" id="issues-text">
+    </form>
+
+    <button class="button-save" onclick="getOption()">Save</button>
+    <p> The value of the option selected is:
+        <span class="output"></span>
+    </p>
+    <p>----------------------------------------------------------------------</p>
+
+    <label for="select-machine-query">Choose machine:</label>
+    <select id="select-machine-query">
+        <option value="" disabled selected hidden>-----</option>
+        <option value="ACO">ACO</option>
+        <option value="AAC">AAC</option>
+        <option value="UCB">UCB</option>
+        <option value="UCC">UCC</option>
+        <option value="ACP">ACP</option>
+    </select>
+    
+    <!-- <label for="select-machine-no-query">Machine No:</label> -->
+    <!-- <select id="select-machine-no-query">
+        <option value="" disabled selected hidden>-----</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+    </select> -->
+    <label for="time-query">Choose month:</label>
+
+    <input type="month" id="time-query" name="time-query" />
+    <button class="button-check" onclick="getOption_test()">Check</button>
+    <p> The value of the option selected is:
+        <span class="output-query"></span>
+    </p>
+    <table id="mttrmtbf-table" class="my-table" style="width:100%">
+        <thead>
+            <tr>
+                <th>PROJECT</th>
+                <th>KPI</th>
+                <th>STD(hr)</th>
+                <th>Jan</th>
+                <th>Feb</th>
+                <th>Mar</th>
+                <th>Apr</th>
+                <th>May</th>
+                <th>Jun</th>
+                <th>Jul</th>
+                <th>Aug</th>
+                <th>Sep</th>
+                <th>Oct</th>
+                <th>Nov</th>
+                <th>Dec</th>
+                <th>AVERAGE</th>
+            </tr>
+        </thead>
+        <tbody class="tablebody">
+                
+        </tbody>
+    </table>
+</body></html>
